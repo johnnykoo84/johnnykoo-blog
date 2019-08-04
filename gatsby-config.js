@@ -1,11 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
-    author: `Kyle Mathews`,
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    title: `kooboy blog`,
+    author: `Johnny Koo`,
+    description: `daily log`,
+    siteUrl: `https://johnnykoo.netlify.com/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `johnnykoo84`,
+      facebook: "johnnykoo84",
     },
   },
   plugins: [
@@ -72,6 +73,29 @@ module.exports = {
       resolve: `gatsby-plugin-typography`,
       options: {
         pathToConfigModule: `src/utils/typography`,
+      },
+    },
+    {
+      resolve: "gatsby-transformer-remark",
+      options: {
+        plugins: [
+          {
+            resolve: "gatsby-remark-prismjs",
+            options: {
+              classPrefix: "language-",
+              inlineCodeMarker: null,
+              aliasesL: {},
+              showLineNumbers: false,
+              noInlineHighlight: false,
+            },
+          },
+        ],
+      },
+    },
+    {
+      resolve: "gatsby-plugin-disqus",
+      options: {
+        shortname: "johnnykoo",
       },
     },
   ],
