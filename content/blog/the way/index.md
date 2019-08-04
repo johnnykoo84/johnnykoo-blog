@@ -5,7 +5,45 @@ date: "2015-05-01T22:12:03.284Z"
 
 This is my first post on my new fake blog! How exciting!
 
-I'm sure I'll write a lot more interesting things in the future.
+한 번 한글을 써 보도록 하자.
+
+이건 한글
+
+# 한글
+
+## 한글
+
+### 한글
+
+코드도 써 보도록 하자
+
+```js
+import { Observable } from "rxjs"
+
+const observable = new Observable(subscriber => {
+  subscriber.next(1)
+  subscriber.next(2)
+  subscriber.next(3)
+  setTimeout(() => {
+    subscriber.next(4)
+    subscriber.complete()
+  }, 1000)
+})
+
+console.log("just before subscribe")
+observable.subscribe({
+  next(x) {
+    console.log("got value " + x)
+  },
+  error(err) {
+    console.error("something wrong occurred: " + err)
+  },
+  complete() {
+    console.log("done")
+  },
+})
+console.log("just after subscribe")
+```
 
 Oh, and here's a great quote from this Wikipedia on
 [salted duck eggs](http://en.wikipedia.org/wiki/Salted_duck_egg).
