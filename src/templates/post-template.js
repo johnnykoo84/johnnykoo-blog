@@ -5,12 +5,12 @@ const PostTemplate = ({ post, config, location }) => {
   let disqusConfig = {
     url: `${config.siteUrl + location.pathname}`,
     identifier: post.id,
-    title: post.title,
+    title: post.frontmatter.title,
   }
   return (
     <>
-      <h1>{post.title}</h1>
-      <CommentCount config={disqusConfig} placeholder={"..."} />
+      <h1>{post.frontmatter.title}</h1>
+      <CommentCount config={disqusConfig} />
       <Disqus config={disqusConfig} />
     </>
   )
