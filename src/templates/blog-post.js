@@ -39,6 +39,23 @@ class BlogPostTemplate extends React.Component {
         >
           {post.frontmatter.date}
         </p>
+        <p
+          style={{
+            ...scale(-1 / 5),
+            display: `block`,
+            // marginBottom: rhythm(1),
+          }}
+        >
+          Tags:{" "}
+          {post.frontmatter.tags
+            ? post.frontmatter.tags.map((tag, i) => [
+                <strong key={i}>
+                  {tag}
+                  {i < post.frontmatter.tags.length - 1 ? ", " : ""}
+                </strong>,
+              ])
+            : null}
+        </p>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr
           style={{
@@ -99,6 +116,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        tags
       }
     }
   }

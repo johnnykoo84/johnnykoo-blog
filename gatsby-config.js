@@ -98,5 +98,6 @@ module.exports = {
         shortname: "kooboyblog",
       },
     },
+    `gatsby-plugin-lodash`,
   ],
 }

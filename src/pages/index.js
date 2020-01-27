@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import kebabCase from "lodash/kebabCase"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
@@ -17,6 +18,7 @@ class BlogIndex extends React.Component {
         <SEO title="All posts" />
         <Bio />
         {posts.map(({ node }) => {
+          console.log("@@@", node.frontmatter.tags)
           const title = node.frontmatter.title || node.fields.slug
           return (
             <div key={node.fields.slug}>
@@ -29,6 +31,17 @@ class BlogIndex extends React.Component {
                   {title}
                 </Link>
               </h3>
+              {/* {node.frontmatter.tags ? (
+                <div className="tags-container">
+                  <ul className="taglist">
+                    {node.frontmatter.tags.map(tag => (
+                      <li key={tag + `tag`}>
+                        <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ) : null} */}
               <small>{node.frontmatter.date}</small>
               <p
                 dangerouslySetInnerHTML={{
@@ -63,6 +76,7 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             description
+            tags
           }
         }
       }

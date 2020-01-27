@@ -10,26 +10,39 @@ class Layout extends React.Component {
     const rootPath = `${__PATH_PREFIX__}/`
     let header
 
+    const ListLink = props => (
+      <li style={{ display: `inline-block`, marginRight: `1rem` }}>
+        <Link to={props.to}>{props.children}</Link>
+      </li>
+    )
+
     if (location.pathname === rootPath) {
       header = (
-        <h1
-          style={{
-            ...scale(1.5),
-            marginBottom: rhythm(1.5),
-            marginTop: 0,
-          }}
-        >
-          <Link
+        <>
+          <h1
             style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
+              ...scale(1.5),
+              marginBottom: rhythm(1.5),
+              marginTop: 0,
             }}
-            to={`/`}
           >
-            {title}
-          </Link>
-        </h1>
+            <Link
+              style={{
+                boxShadow: `none`,
+                textDecoration: `none`,
+                color: `inherit`,
+              }}
+              to={`/`}
+            >
+              {title}
+            </Link>
+          </h1>
+          {/* <ul style={{ listStyle: `none`, float: `right` }}>
+            <ListLink to="/">Home</ListLink>
+            <ListLink to="/about/">About</ListLink>
+            <ListLink to="/contact/">Contact</ListLink>
+          </ul> */}
+        </>
       )
     } else {
       header = (
