@@ -99,5 +99,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-lodash`,
+    `gatsby-plugin-styled-components`,
   ],
 }

@@ -6,6 +6,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
 import PostTemplate from "./post-template"
+import { TagBox } from "./styles"
 
 class BlogPostTemplate extends React.Component {
   config = {
@@ -46,13 +47,14 @@ class BlogPostTemplate extends React.Component {
             // marginBottom: rhythm(1),
           }}
         >
-          Tags:{" "}
+          {/* Tags:{" "} */}
           {post.frontmatter.tags
             ? post.frontmatter.tags.map((tag, i) => [
-                <strong key={i}>
-                  {tag}
-                  {i < post.frontmatter.tags.length - 1 ? ", " : ""}
-                </strong>,
+                <TagBox key={i}>{tag}</TagBox>,
+                // <strong key={i}>
+                //   {tag}
+                //   {i < post.frontmatter.tags.length - 1 ? ", " : ""}
+                // </strong>,
               ])
             : null}
         </p>
