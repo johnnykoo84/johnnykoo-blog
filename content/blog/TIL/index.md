@@ -1,6 +1,6 @@
 ---
-title: TIL 2020-01-27
-date: "2015-05-06T23:46:37.121Z"
+title: TIL 이제부터 TIL은 Gatsby 에서 남기자
+date: "2020-01-27T23:46:37.121Z"
 # tags:
 # - TIL
 # - dev
