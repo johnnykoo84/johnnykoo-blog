@@ -63,6 +63,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        description
       }
     }
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
@@ -75,7 +76,6 @@ export const pageQuery = graphql`
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
-            description
             tags
           }
         }
