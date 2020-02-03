@@ -15,8 +15,7 @@ class Layout extends React.Component {
         <Link to={props.to}>{props.children}</Link>
       </li>
     )
-
-    if (location.pathname === rootPath) {
+    if (location && location.pathname === rootPath) {
       header = (
         <>
           <h1
