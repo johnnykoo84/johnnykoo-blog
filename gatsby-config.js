@@ -100,5 +100,6 @@ module.exports = {
     },
     `gatsby-plugin-lodash`,
     `gatsby-plugin-styled-components`,
+    "gatsby-plugin-dark-mode",
   ],
 }

@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import favicon from "../images/favicon.ico"
 import Helmet from "react-helmet"
 import { rhythm, scale } from "../utils/typography"
+import { ThemeToggler } from "gatsby-plugin-dark-mode"
 
 class Layout extends React.Component {
   render() {
@@ -20,21 +21,41 @@ class Layout extends React.Component {
         <>
           <h1
             style={{
-              ...scale(1.5),
+              // ...scale(1.5),
               marginBottom: rhythm(1.5),
               marginTop: 0,
             }}
           >
-            <Link
+            <span
               style={{
-                boxShadow: `none`,
-                textDecoration: `none`,
-                color: `inherit`,
+                ...scale(1.5),
               }}
-              to={`/`}
             >
-              {title}
-            </Link>
+              <Link
+                style={{
+                  boxShadow: `none`,
+                  textDecoration: `none`,
+                  color: `inherit`,
+                }}
+                to={`/`}
+              >
+                {title}
+              </Link>
+            </span>
+            <ThemeToggler>
+              {({ theme, toggleTheme }) => (
+                <label>
+                  <input
+                    type="checkbox"
+                    onChange={e =>
+                      toggleTheme(e.target.checked ? "dark" : "light")
+                    }
+                    checked={theme === "dark"}
+                  />{" "}
+                  Dark mode
+                </label>
+              )}
+            </ThemeToggler>
           </h1>
           {/* <ul style={{ listStyle: `none`, float: `right` }}>
             <ListLink to="/">Home</ListLink>
@@ -61,29 +82,58 @@ class Layout extends React.Component {
           >
             {title}
           </Link>
+          <span
+            style={{
+              marginLeft: "18rem",
+            }}
+          >
+            <ThemeToggler>
+              {({ theme, toggleTheme }) => (
+                <label>
+                  <input
+                    type="checkbox"
+                    onChange={e =>
+                      toggleTheme(e.target.checked ? "dark" : "light")
+                    }
+                    checked={theme === "dark"}
+                  />{" "}
+                  Dark mode
+                </label>
+              )}
+            </ThemeToggler>
+          </span>
         </h3>
       )
     }
     return (
       <>
-        <Helmet>
-          <link rel="icon" href={favicon} />
-        </Helmet>
         <div
           style={{
-            marginLeft: `auto`,
-            marginRight: `auto`,
-            maxWidth: rhythm(24),
-            padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+            backgroundColor: "var(--bg)",
+            color: "var(--textNormal)",
+            transition: "color 0.2s ease-out, background 0.2s ease-out",
           }}
         >
-          <header>{header}</header>
-          <main>{children}</main>
-          <footer>
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
-          </footer>
+          <Helmet>
+            <link rel="icon" href={favicon} />
+          </Helmet>
+
+          <div
+            style={{
+              marginLeft: `auto`,
+              marginRight: `auto`,
+              maxWidth: rhythm(24),
+              padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+            }}
+          >
+            <header>{header}</header>
+            <main>{children}</main>
+            <footer>
+              © {new Date().getFullYear()}, Built with
+              {` `}
+              <a href="https://www.gatsbyjs.org">Gatsby</a>
+            </footer>
+          </div>
         </div>
       </>
     )
