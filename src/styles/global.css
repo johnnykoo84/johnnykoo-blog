@@ -4,7 +4,7 @@ body {
   --bg: white;
   --textNormal: #222;
   --textTitle: #222;
-  --textLink: blue;
+  --textLink: rgb(36, 36, 49);
   --hr: hsla(0, 0%, 0%, 0.2);
 
   background-color: var(--bg);
@@ -89,7 +89,7 @@ input:checked + .slider:before {
   top: 50%;
   left: 70%;
   font-size: 12px;
-  font-family: Verdana, sans-serif;
+  font-family: Montserrat, sans-serif;
 }
 
 input:checked + .slider:after {
