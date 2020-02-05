@@ -42,20 +42,6 @@ class Layout extends React.Component {
                 {title}
               </Link>
             </span>
-            <ThemeToggler>
-              {({ theme, toggleTheme }) => (
-                <label>
-                  <input
-                    type="checkbox"
-                    onChange={e =>
-                      toggleTheme(e.target.checked ? "dark" : "light")
-                    }
-                    checked={theme === "dark"}
-                  />{" "}
-                  Dark mode
-                </label>
-              )}
-            </ThemeToggler>
           </h1>
           {/* <ul style={{ listStyle: `none`, float: `right` }}>
             <ListLink to="/">Home</ListLink>
@@ -82,26 +68,6 @@ class Layout extends React.Component {
           >
             {title}
           </Link>
-          <span
-            style={{
-              marginLeft: "18rem",
-            }}
-          >
-            <ThemeToggler>
-              {({ theme, toggleTheme }) => (
-                <label>
-                  <input
-                    type="checkbox"
-                    onChange={e =>
-                      toggleTheme(e.target.checked ? "dark" : "light")
-                    }
-                    checked={theme === "dark"}
-                  />{" "}
-                  Dark mode
-                </label>
-              )}
-            </ThemeToggler>
-          </span>
         </h3>
       )
     }
@@ -126,6 +92,27 @@ class Layout extends React.Component {
               padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
             }}
           >
+            <div
+              style={{
+                marginBottom: "1rem",
+                textAlign: "right",
+              }}
+            >
+              <ThemeToggler>
+                {({ theme, toggleTheme }) => (
+                  <label class="switch">
+                    <input
+                      type="checkbox"
+                      onChange={e =>
+                        toggleTheme(e.target.checked ? "dark" : "light")
+                      }
+                      checked={theme === "dark"}
+                    />
+                    <span class="slider round"></span>
+                  </label>
+                )}
+              </ThemeToggler>
+            </div>
             <header>{header}</header>
             <main>{children}</main>
             <footer>
