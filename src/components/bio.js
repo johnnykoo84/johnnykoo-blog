@@ -54,11 +54,11 @@ const Bio = () => {
         }}
       />
       <p>
-        <strong>{author}</strong> 의 블로그에 오신 것을 환영합니다.
+        Welcome to <strong>{author}</strong>'s blog
         {` `}
-        <a href={`https://twitter.com/${social.twitter}`}>
-          You should follow him on Twitter
-        </a>
+        {/* <a href={`https://twitter.com/${social.twitter}`}>
+          <p>You may follow him on Twitter</p>
+        </a> */}
       </p>
     </div>
   )

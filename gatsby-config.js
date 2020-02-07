@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `kooboy blog`,
-    author: `Johnny Koo`,
+    author: `Johnny Ilmo Koo`,
     description: `daily log`,
     siteUrl: `https://johnnykoo.netlify.com/`,
     social: {
