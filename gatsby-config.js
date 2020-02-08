@@ -109,8 +109,24 @@ module.exports = {
         display: "swap",
       },
     },
+    {
+      resolve: "gatsby-transformer-remark",
+      options: {
+        plugins: [
+          {
+            resolve: "gatsby-remark-embed-youtube",
+            options: {
+              width: 800,
+              height: 400,
+            },
+          },
+        ],
+      },
+    },
     `gatsby-plugin-lodash`,
     `gatsby-plugin-styled-components`,
     "gatsby-plugin-dark-mode",
+    "gatsby-remark-embed-youtube",
+    "gatsby-remark-responsive-iframe",
   ],
 }
