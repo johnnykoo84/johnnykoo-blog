@@ -1,4 +1,9 @@
 /* global.css */
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono|Sriracha|Ubuntu&display=swap");
+
+html {
+  font-family: "Roboto Mono", monospace;
+}
 
 body {
   --bg: white;

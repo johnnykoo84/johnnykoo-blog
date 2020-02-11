@@ -22,6 +22,7 @@ class Layout extends React.Component {
           <h1
             style={{
               // ...scale(1.5),
+              fontFamily: `Sriracha, cursive`,
               marginBottom: rhythm(1.5),
               marginTop: 0,
             }}
@@ -54,7 +55,7 @@ class Layout extends React.Component {
       header = (
         <h3
           style={{
-            fontFamily: `Montserrat, sans-serif`,
+            fontFamily: `Sriracha, cursive`,
             marginTop: 0,
           }}
         >
@@ -115,7 +116,11 @@ class Layout extends React.Component {
             </div>
             <header>{header}</header>
             <main>{children}</main>
-            <footer>
+            <footer
+              style={{
+                fontFamily: `Sriracha, cursive`,
+              }}
+            >
               © {new Date().getFullYear()}, Built with
               {` `}
               <a href="https://www.gatsbyjs.org">Gatsby</a>
