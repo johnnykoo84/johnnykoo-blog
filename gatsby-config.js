@@ -51,6 +51,14 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve: "gatsby-remark-embed-youtube",
+            options: {
+              width: 800,
+              height: 400,
+            },
+          },
+          "gatsby-remark-responsive-iframe",
+          {
             resolve: "gatsby-remark-prismjs",
             options: {
               classPrefix: "language-js",
@@ -60,20 +68,13 @@ module.exports = {
               noInlineHighlight: false,
             },
           },
-          {
-            resolve: "gatsby-remark-embed-youtube",
-            options: {
-              width: 800,
-              height: 400,
-            },
-          },
         ],
       },
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
+        trackingId: `UA-158209368-1`,
       },
     },
     {
@@ -116,16 +117,23 @@ module.exports = {
         display: "swap",
       },
     },
-    {
-      resolve: "gatsby-transformer-remark",
-      options: {
-        plugins: [],
-      },
-    },
+    // {
+    //   resolve: "gatsby-transformer-remark",
+    //   options: {
+    //     plugins: [
+    //       {
+    //         resolve: "gatsby-remark-embed-youtube",
+    //         options: {
+    //           width: 800,
+    //           height: 400,
+    //         },
+    //       },
+    //       "gatsby-remark-responsive-iframe",
+    //     ],
+    //   },
+    // },
     `gatsby-plugin-lodash`,
     `gatsby-plugin-styled-components`,
     "gatsby-plugin-dark-mode",
-    "gatsby-remark-embed-youtube",
-    "gatsby-remark-responsive-iframe",
   ],
 }
