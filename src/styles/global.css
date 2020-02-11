@@ -3,6 +3,13 @@
 
 html {
   font-family: "Roboto Mono", monospace;
+  font-weight: 700;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "open sans", "Roboto Mono", monospace;
 }
 
 body {
@@ -75,7 +82,6 @@ input:checked + .slider:before {
   transform: translateX(26px);
 }
 
-/* Rounded sliders */
 .slider.round {
   border-radius: 12px;
 }
@@ -84,7 +90,6 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
-/*------ ADDED CSS ---------*/
 .slider:after {
   content: "L";
   color: white;

@@ -1,16 +1,10 @@
 ---
-title: TIL 이제부터 TIL은 Gatsby 에서 남기자
+title: TIL Start
 date: "2020-01-27T23:46:37.121Z"
-# tags:
-# - TIL
-# - dev
-tags: ["cat", "kitten", "javascript"]
+tags: ["TIL"]
 ---
 
-# 개츠비 테스트 중
+# Johnny's TIL
+This is my TIL, and hopfeully I continuosly jot down my dail log.
 
-아직도 블로그 테스팅을 하고 있다니, 시간이 없다고 하는건 핑계다.
-많이 한심하다.
-
-언제나 실행이 먼저다. 실행 후 고치면 된다.
-이걸 [dev.to 개발 블로그 커뮤니티](dev.to) 랑 연결해야 하는데 그건 언제 할지.. 그것도 바로 생각난 김에 해 봐야겠다.
+앞으로 매일 매일 배움의 족적을 남기도록 하겠습니다. 

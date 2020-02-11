@@ -47,14 +47,9 @@ class BlogPostTemplate extends React.Component {
             // marginBottom: rhythm(1),
           }}
         >
-          {/* Tags:{" "} */}
           {post.frontmatter.tags
             ? post.frontmatter.tags.map((tag, i) => [
                 <TagBox key={i}>{tag}</TagBox>,
-                // <strong key={i}>
-                //   {tag}
-                //   {i < post.frontmatter.tags.length - 1 ? ", " : ""}
-                // </strong>,
               ])
             : null}
         </p>
