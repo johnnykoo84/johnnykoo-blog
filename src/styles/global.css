@@ -8,7 +8,9 @@ html {
 
 h1,
 h2,
-h3 {
+h3,
+p,
+li {
   font-family: "open sans", "Roboto Mono", monospace;
 }
 
