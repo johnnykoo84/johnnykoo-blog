@@ -60,7 +60,6 @@ class BlogPostTemplate extends React.Component {
           }}
         />
         <Bio />
-
         <ul
           style={{
             display: `flex`,
@@ -85,11 +84,13 @@ class BlogPostTemplate extends React.Component {
             )}
           </li>
         </ul>
+        {/*
+        This is duplicate title from the top, so remove it 
         <PostTemplate
           config={this.config}
           post={post}
           location={this.props.location}
-        />
+        /> */}
       </Layout>
     )
   }
