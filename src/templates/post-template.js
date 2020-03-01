@@ -9,7 +9,7 @@ const PostTemplate = ({ post, config, location }) => {
   }
   return (
     <>
-      <h1>{post.frontmatter.title}</h1>
+      {/* <h1>{post.frontmatter.title}</h1> */}
       <CommentCount config={disqusConfig} />
       <Disqus config={disqusConfig} />
     </>
