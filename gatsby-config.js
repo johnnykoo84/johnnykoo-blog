@@ -13,15 +13,15 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/blog`,
-        name: `blog`,
+        path: `${__dirname}/content/assets`,
+        name: `assets`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/assets`,
-        name: `assets`,
+        path: `${__dirname}/content/blog`,
+        name: `blog`,
       },
     },
     {
@@ -29,27 +29,14 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve: `gatsby-remark-relative-images`,
+          },
+          {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 590,
             },
           },
-          {
-            resolve: `gatsby-remark-responsive-iframe`,
-            options: {
-              wrapperStyle: `margin-bottom: 1.0725rem`,
-            },
-          },
-          `gatsby-remark-prismjs`,
-          `gatsby-remark-copy-linked-files`,
-          `gatsby-remark-smartypants`,
-        ],
-      },
-    },
-    {
-      resolve: "gatsby-transformer-remark",
-      options: {
-        plugins: [
           {
             resolve: "gatsby-remark-embed-youtube",
             options: {
@@ -57,7 +44,9 @@ module.exports = {
               height: 400,
             },
           },
-          "gatsby-remark-responsive-iframe",
+          `gatsby-remark-responsive-iframe`,
+          `gatsby-remark-copy-linked-files`,
+          `gatsby-remark-smartypants`,
           {
             resolve: "gatsby-remark-prismjs",
             options: {
@@ -71,6 +60,8 @@ module.exports = {
         ],
       },
     },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
@@ -89,8 +80,7 @@ module.exports = {
         icon: `content/assets/gatsby-icon.png`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+
     `gatsby-plugin-feed`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
@@ -117,21 +107,6 @@ module.exports = {
         display: "swap",
       },
     },
-    // {
-    //   resolve: "gatsby-transformer-remark",
-    //   options: {
-    //     plugins: [
-    //       {
-    //         resolve: "gatsby-remark-embed-youtube",
-    //         options: {
-    //           width: 800,
-    //           height: 400,
-    //         },
-    //       },
-    //       "gatsby-remark-responsive-iframe",
-    //     ],
-    //   },
-    // },
     `gatsby-plugin-lodash`,
     `gatsby-plugin-styled-components`,
     "gatsby-plugin-dark-mode",
