@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import Img from "gatsby-image"
 import kebabCase from "lodash/kebabCase"
 
 import Bio from "../components/bio"
@@ -36,6 +37,13 @@ class BlogIndex extends React.Component {
                   {title}
                 </Link>
               </h3>
+              <Img
+                sizes={
+                  node.frontmatter.featuredImage
+                    ? node.frontmatter.featuredImage.childImageSharp.sizes
+                    : 10
+                }
+              />
               {/* {node.frontmatter.tags ? (
                 <div className="tags-container">
                   <ul className="taglist">
@@ -75,13 +83,20 @@ export const pageQuery = graphql`
       edges {
         node {
           excerpt
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-            tags
-          }
           fields {
             slug
+          }
+          frontmatter {
+            date(formatString: "YYYY, MMMM, DD")
+            title
+            tags
+            featuredImage {
+              childImageSharp {
+                sizes(maxWidth: 630) {
+                  ...GatsbyImageSharpSizes
+                }
+              }
+            }
           }
         }
       }
