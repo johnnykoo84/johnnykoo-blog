@@ -58,9 +58,9 @@ It is fair enough to assume a typo. I removed a typo and re-plotted.
 plot is now updatedd with fixed data.
 I trimmed out years of coding prefossional more than 10 years because according to wikipedia it says the coding bootcamp has been for 9 years (the first bootcamp was in 2001 in U.S.).
 
-### For Perspective Student Aspect 🎓
+### For Prospective Student Aspect 🎓
 
-Speaking of Salary, as a perspective student, it is incorrect compare the salary you expect to get at 1st year. Why? you have to spend 4 years at college to get a job with the degree, but coding bootcamp on overage takes maximum 6 months, and say you need 6 months for job searching conservatively. You have full 3 years of salary 💵 & experience 🏃‍♂️ while C.S. degree students study in college.
+Speaking of Salary, as a prospective student, it is incorrect compare the salary you expect to get at 1st year. Why? you have to spend 4 years at college to get a job with the degree, but coding bootcamp on overage takes maximum 6 months, and say you need 6 months for job searching conservatively. You have full 3 years of salary 💵 & experience 🏃‍♂️ while C.S. degree students study in college.
 
 #### side note
 
