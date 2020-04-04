@@ -23,8 +23,6 @@ class Layout extends React.Component {
             style={{
               // ...scale(1.5),
               fontFamily: `Sriracha, cursive`,
-              marginBottom: rhythm(1.5),
-              marginTop: 0,
             }}
           >
             <span
@@ -44,11 +42,6 @@ class Layout extends React.Component {
               </Link>
             </span>
           </h1>
-          {/* <ul style={{ listStyle: `none`, float: `right` }}>
-            <ListLink to="/">Home</ListLink>
-            <ListLink to="/about/">About</ListLink>
-            <ListLink to="/contact/">Contact</ListLink>
-          </ul> */}
         </>
       )
     } else {
@@ -56,7 +49,6 @@ class Layout extends React.Component {
         <h3
           style={{
             fontFamily: `Sriracha, cursive`,
-            marginTop: 0,
           }}
         >
           <Link
@@ -99,6 +91,17 @@ class Layout extends React.Component {
                 textAlign: "right",
               }}
             >
+              <div>
+                <ul
+                  style={{
+                    listStyle: `none`,
+                    float: `left`,
+                  }}
+                >
+                  <ListLink to="/">Home</ListLink>
+                  <ListLink to="/about/">About</ListLink>
+                </ul>
+              </div>
               <ThemeToggler>
                 {({ theme, toggleTheme }) => (
                   <label class="switch">
@@ -114,8 +117,14 @@ class Layout extends React.Component {
                 )}
               </ThemeToggler>
             </div>
-            <header>{header}</header>
-            <main>{children}</main>
+            <div
+              style={{
+                textAlign: "left",
+              }}
+            >
+              <header>{header}</header>
+              <main>{children}</main>
+            </div>
             <footer
               style={{
                 fontFamily: `Sriracha, cursive`,
