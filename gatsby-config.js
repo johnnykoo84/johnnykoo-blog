@@ -110,5 +110,19 @@ module.exports = {
     `gatsby-plugin-lodash`,
     `gatsby-plugin-styled-components`,
     "gatsby-plugin-dark-mode",
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: "gatsby-remark-external-links",
+            options: {
+              target: "_self",
+              rel: "nofollow",
+            },
+          },
+        ],
+      },
+    },
   ],
 }
