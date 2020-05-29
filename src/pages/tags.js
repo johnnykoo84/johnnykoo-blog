@@ -18,7 +18,11 @@ const TagsPage = ({
 }) => (
   <div>
     <Helmet title={title} />
-    <div>
+    <div
+      style={{
+        paddingLeft: "1.5rem",
+      }}
+    >
       <h1>Tags</h1>
       <ul>
         {group.map(tag => (

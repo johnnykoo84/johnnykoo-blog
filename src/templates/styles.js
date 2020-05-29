@@ -20,4 +20,5 @@ export const TagBox = styled.a`
   text-decoration: none;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   font-weight: bold;
+  cursor: pointer;
 `

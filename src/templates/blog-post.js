@@ -14,22 +14,20 @@ class BlogPostTemplate extends React.Component {
   }
   render() {
     const post = this.props.data.markdownRemark
+    const { title, date, tags, description } = post.frontmatter
     const siteTitle = this.props.data.site.siteMetadata.title
     const { previous, next } = this.props.pageContext
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <SEO
-          title={post.frontmatter.title}
-          description={post.frontmatter.description || post.excerpt}
-        />
+        <SEO title={title} description={description || post.excerpt} />
         <h1
           style={{
             marginTop: rhythm(1),
             marginBottom: 0,
           }}
         >
-          {post.frontmatter.title}
+          {title}
         </h1>
         <p
           style={{
@@ -38,7 +36,7 @@ class BlogPostTemplate extends React.Component {
             marginBottom: rhythm(1),
           }}
         >
-          {post.frontmatter.date}
+          {date}
         </p>
         <p
           style={{
@@ -47,11 +45,15 @@ class BlogPostTemplate extends React.Component {
             // marginBottom: rhythm(1),
           }}
         >
-          {post.frontmatter.tags
-            ? post.frontmatter.tags.map((tag, i) => [
-                <TagBox key={i}>{tag}</TagBox>,
-              ])
-            : null}
+          {tags &&
+            tags.map((tag, i) => {
+              const route = `/tags/${tag.toLowerCase()}/`
+              return [
+                <TagBox key={i}>
+                  <Link to={route}>{tag}</Link>
+                </TagBox>,
+              ]
+            })}
         </p>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr
