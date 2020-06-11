@@ -46,11 +46,23 @@ body.dark {
 
   --boxShadow1: rgba(249, 251, 82, 0.13);
   --boxShadow2: rgba(232, 248, 85, 0.19);
+  blockquote {
+    :last-child {
+      color: white;
+      // border-left-color: whitesmoke;
+      // content: open-quote;
+      // margin-right: 0.25em;
+      margin: 1.5em 10px;
+      padding: 0.5em 10px;
+    }
+  }
 }
 
 .content blockquote {
-  background-color: var(--navbarBackground);
+  color: inherit;
+  border-left-color: inherit;
 }
+
 .content h1,
 .content h2,
 .content h3,
