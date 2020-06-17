@@ -44,6 +44,13 @@ module.exports = {
               height: 400,
             },
           },
+          {
+            resolve: "gatsby-remark-external-links",
+            options: {
+              target: "_self",
+              rel: "nofollow",
+            },
+          },
           `gatsby-remark-responsive-iframe`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
@@ -111,19 +118,5 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     "gatsby-plugin-dark-mode",
     "gatsby-plugin-sass",
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
-          {
-            resolve: "gatsby-remark-external-links",
-            options: {
-              target: "_self",
-              rel: "nofollow",
-            },
-          },
-        ],
-      },
-    },
   ],
 }
