@@ -1,9 +1,9 @@
 import { Disqus, CommentCount } from "gatsby-plugin-disqus"
 import React from "react"
 
-const PostTemplate = ({ post, config, location }) => {
+const PostTemplate = ({ post, siteUrl, location }) => {
   let disqusConfig = {
-    url: `${config.siteUrl + location.pathname}`,
+    url: `${siteUrl + location.pathname}`,
     identifier: post.id,
     title: post.frontmatter.title,
   }

@@ -7,7 +7,11 @@ import { ThemeToggler } from "gatsby-plugin-dark-mode"
 
 class Layout extends React.Component {
   render() {
-    const { location, title, children } = this.props
+    const { location, children, siteMetadata } = this.props
+    const { title, siteUrl } = siteMetadata
+    console.log("@@@@ siteMetadata in layout", siteMetadata)
+    console.log("@@@@ title", title)
+    console.log("@@@@ siteUrl", siteUrl)
     const rootPath = `${__PATH_PREFIX__}/`
     let header
 
@@ -73,8 +77,10 @@ class Layout extends React.Component {
             transition: "color 0.2s ease-out, background 0.2s ease-out",
           }}
         >
-          <Helmet>
-            <link rel="icon" href={favicon} />
+          <Helmet title={title}>
+            {/* <link rel="icon" href={favicon} /> */}
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:image" content={`${siteUrl}twitter-card.jpg`} />
           </Helmet>
 
           <div

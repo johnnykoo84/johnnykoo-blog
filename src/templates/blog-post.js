@@ -9,17 +9,17 @@ import PostTemplate from "./post-template"
 import { TagBox } from "./styles"
 
 class BlogPostTemplate extends React.Component {
-  config = {
-    siteUrl: "https://johnnykoo.netlify.com",
-  }
+  // config = {
+  //   siteUrl: "https://johnnykoo.netlify.com",
+  // }
   render() {
     const post = this.props.data.markdownRemark
     const { title, date, tags, description } = post.frontmatter
-    const siteTitle = this.props.data.site.siteMetadata.title
+    const siteMetadata = this.props.data.site.siteMetadata
     const { previous, next } = this.props.pageContext
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
+      <Layout location={this.props.location} siteMetadata={siteMetadata}>
         <SEO title={title} description={description || post.excerpt} />
         <h1
           style={{
@@ -87,7 +87,7 @@ class BlogPostTemplate extends React.Component {
           </li>
         </ul>
         <PostTemplate
-          config={this.config}
+          siteUrl={siteMetadata.siteUrl}
           post={post}
           location={this.props.location}
         />
@@ -103,6 +103,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+        siteUrl
         author
         description
       }

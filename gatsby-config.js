@@ -2,8 +2,8 @@ module.exports = {
   siteMetadata: {
     title: `kooboy blog`,
     author: `Johnny Ilmo Koo`,
-    description: `daily log`,
-    siteUrl: `https://johnnykoo.netlify.com/`,
+    description: `Now or Never`,
+    siteUrl: `https://johnnykoo.dev`,
     social: {
       twitter: `johnnykoo84`,
       facebook: "johnnykoo84",
@@ -64,6 +64,7 @@ module.exports = {
               noInlineHighlight: false,
             },
           },
+          `gatsby-remark-social-cards`,
         ],
       },
     },
@@ -118,5 +119,36 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     "gatsby-plugin-dark-mode",
     "gatsby-plugin-sass",
+    {
+      resolve: `gatsby-remark-social-cards`,
+      options: {
+        title: {
+          field: "title",
+          font: "DejaVuSansCondensed",
+          color: "black",
+          size: 48,
+          style: "bold",
+          x: null,
+          y: null,
+        },
+        meta: {
+          parts: [
+            "- ",
+            { field: "author" },
+            " » ",
+            { field: "date", format: "mmmm dS" },
+          ],
+          font: "DejaVuSansCondensed",
+          color: "black",
+          size: 24,
+          style: "normal",
+          x: null,
+          y: null,
+        },
+        background: "#FFFFFF",
+        xMargin: 24,
+        yMargin: 24,
+      },
+    },
   ],
 }
