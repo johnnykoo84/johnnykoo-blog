@@ -8,10 +8,8 @@ import { ThemeToggler } from "gatsby-plugin-dark-mode"
 class Layout extends React.Component {
   render() {
     const { location, children, siteMetadata } = this.props
-    const { title, siteUrl } = siteMetadata
-    console.log("@@@@ siteMetadata in layout", siteMetadata)
-    console.log("@@@@ title", title)
-    console.log("@@@@ siteUrl", siteUrl)
+    const { title, siteUrl } = siteMetadata || {}
+
     const rootPath = `${__PATH_PREFIX__}/`
     let header
 

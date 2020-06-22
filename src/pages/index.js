@@ -12,7 +12,6 @@ class BlogIndex extends React.Component {
   render() {
     const { data } = this.props
     // const siteTitle = data.site.siteMetadata.title
-    console.log("@@ data in index", data)
     const siteMetadata = data.site.siteMetadata
     const posts = data.allMarkdownRemark.edges
 
