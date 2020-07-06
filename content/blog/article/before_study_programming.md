@@ -15,3 +15,7 @@ tags: ["YOUTUBE", "CODESTATES WEEKLY TALK"]
 #### 코드스테이츠 CPO 구일모 님께서 주간 토크의 첫 번째 주자로 이야기해주셨습니다. 🙂
 
 `youtube:https://www.youtube.com/embed/RRSYfDfujGk`
+
+---
+
+경제적 사회적 배경에 상관 없이, 누구나 잠재력을 발휘할 수 있는, 현장에 필요한 교육을 제공하는 혁신적인 부트캠프, [**코드스테이츠**](https://bit.ly/3gwHECt) 에서 일하고 있습니다.
