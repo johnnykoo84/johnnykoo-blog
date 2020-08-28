@@ -1,6 +1,6 @@
 ---
 title: "(프)리뷰 - XAI 설명 가능한 인공지능, 인공지능을 해부하다 by 안재현"
-date: "2022-06-22"
+date: "2020-06-22"
 tags: ["book", "XAI"]
 featuredImage: ../../assets/XAI.jpg
 ---
