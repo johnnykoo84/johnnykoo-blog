@@ -9,26 +9,21 @@ featuredImage: ../../assets/file_path.png
 
 최근 지인에게 그의 컴퓨터에 있는 PATH 변수가 왜 필요한지 설명을 시도했던 적이 있었다. Slack group 에서 아주 길게 잘 설명을 했는데, 마침 좋은 블로그 컨텐츠가 되겠다 생각했다. 자 여기에 풀어보자...
 
-You've probably heard people and/or blog posts talking about editing your PATH or "such-and-such" not being present in your PATH. And you're just like, "Wait, what exactly is the PATH?". Good question!
-
 여러 블로그 포스트나 게시판의 질문들을 보면 PATH 를 edit 해야 한다든지, 그들이 원하는 것들이 PATH 에 존재하지 않는다든지에 대한 질문들을 본 적이 있을 것이다. 아직도 수 많은 사람들이 터미널에서 특정 명령 라이브러리를 설치했음에도 불구하고 `command not found` 를 만나 많은 시간을 헤메이고 있을지도 모른다.
 ![cmd-not-found](../../assets/cmd_not_found.png)
 
-The PATH variable is basically a list of directories your computer looks through to find a requested executable.
 `PATH` 변수는 요청된 실행부(executable, e.g. 명령어 혹은 파일 등)를 찾기 위한 컴퓨터 디렉토리들의 모음일 뿐이다.
 
-If that definition doesn't make a whole lot of sense at this point, read on and I'll explain how it all works in-depth…
 이 시점에서 이 정의가 그리 와 닿지 않아도 괜찮다. 이 글을 읽어내려가면 모두 어떻게 동작되는지 자세히 설명하도록 하겠다.
 
-your PATH is pretty much a bunch of directional signs telling your computer where to go
 `PATH`는 당신의 컴퓨터에게 어느 쪽으로 가라는 것인지 여러 표지판(signs)라고 생각해도 된다.
-
-A BRIEF INTRODUCTION TO THE FILE SYSTEM
-Let's start at square 1️⃣. Your computer is comprised of files; of which there are two types. You've got data files (files that just contain information) and you've got executable files (files that are used to perform various functions and operations on your computer).
 
 ## 파일 시스템(FILE SYSTEM) 에 대한 간단한 소개
 
-컴퓨터는 파일들로 구성되는데 그 파일들에는 두 가지 타입이 있다. 1. 데이터 파일(정보를 담고 있는 파일) 과 2. 실행파일(컴퓨터에서 여러 함수와 오퍼레이션이 수행되는 파일)이 그 둘이다.
+컴퓨터는 파일들로 구성되는데 그 파일들에는 두 가지 타입이 있다.
+
+1. 데이터 파일(정보를 담고 있는 파일)
+2. 실행파일(컴퓨터에서 여러 함수와 오퍼레이션이 수행되는 파일)
 
 Whenever you open a computer application, you're in essence just running its executable file(s). The same goes for commands you use in your Terminal — for example, cd and ls are just executable files. These executable files are usually stored in some specific directories. The executable files for your applications, for example, are stored in your Applications folder. Executable files for all your CLI programs/commands are typically stored in one of several places:
 /bin → user utilities — contains some common executables used to navigate directories and manage files via the command line (cd, ls, rm, etc)
