@@ -8,7 +8,13 @@ date: "2020-10-23"
 ## Intro
 In this article, we will implement K-Means clustering algorithm from scratch. K-Means Clustering is one of the unsupervised Machine Learning techinque. I will not cover what K-Means clustering is. If you want to know more about this algorithm, please check [this article](https://www.analyticsvidhya.com/blog/2019/08/comprehensive-guide-k-means-clustering/) out. 
 
-I will try to explain the pseudocode first, and go into real implementation with python. 
+
+<figure class="image">
+  <img src="https://www.mathworks.com/matlabcentral/mlc-downloads/downloads/submissions/24616/versions/14/screenshot.jpg" alt="kmeans clustering sample image">
+  <figcaption>source: Mathworks</figcaption>
+</figure>
+
+I will try to explain the pseudocode first, and go into implementation details with python after. 
 
 ## Pseudocode
 *for simplicity, I will consider each sample data is 2-dimensional. (x,y)*
