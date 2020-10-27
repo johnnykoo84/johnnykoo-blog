@@ -212,11 +212,20 @@ for the test code setup, see [HERE](https://github.com/johnnykoo84/CS-Data-Scien
 As we can see both results, both are not so good, and thererfore it is hard to see which one does better performance. For both 'my own implementation' and 'sklearn version implementation' we used `random` initial centroids positions. For 'sklearn version', I tried with `k-means++` initial centroid position option, but the result gave me no improvement at all. 
 
 ## Future Todos
-1. try with more data
-2. try diffent Ks, or find the best K method
-3. Find the dataset working well with sklearn library, and apply my own implementation.
+1. Apply Standardization for both my implementation and sklearn library implementation.
+2. Find the dataset working well with sklearn library, and apply my own implementation.
+3. try diffent Ks, or find the best K method
 
-I will have to update after trying future todos.
+## Apply Standardaziation
+After applying StandardScalar, here are better results. Therefore, future todos 1 and 2 are not
+
+### 1. My own implementation
+![my own implementation](https://i.ibb.co/S7qhb8j/my-kmeans-result.png)
+
+### 2. sklearn library version implementation
+![sklearn version implementation](https://i.ibb.co/QcXD4Gg/sklearn-kmeans-result.png)
+
+It is obvious that sklearn version is now doing its job. K-4 clustering is clear now, however my own implementation is still not working well. 
 
 ## Code Repository
 You can find the full working code in this [GitHub Link](https://github.com/johnnykoo84/CS-Data-Science-Build-Week-1/blob/master/kmeans.py)
